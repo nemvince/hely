@@ -1,10 +1,12 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2024-08-19',
   modules: [
     '@nuxtjs/tailwindcss',
-    '@bg-dev/nuxt-naiveui',
-    '@sidebase/nuxt-auth'
+    '@sidebase/nuxt-auth',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/eslint'
   ],
-  compatibilityDate: '2024-08-19',
   devtools: {
     enabled: false
   },
