@@ -1,0 +1,43 @@
+{
+  "name": "hely",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db": "vite-node prisma/pglite.ts",
+    "start": "NODE_ENV=production node .output/server/index.mjs",
+    "typecheck": "nuxt typecheck",
+    "lint:fix": "eslint . --fix",
+    "lint": "oxlint --deny-warnings -D correctness -D suspicious -D perf && eslint --max-warnings 0 .",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "nuxt": "3.12.4"
+  },
+  "devDependencies": {
+    "@sidebase/nuxt-auth": "^0.9.4",
+    "vite-node": "^2.1.1",
+    "pg-gateway": "0.3.0-beta.3",
+    "@electric-sql/pglite": "^0.2.9",
+    "prisma": "^5.18.0",
+    "@bg-dev/nuxt-naiveui": "1.0.0-edge.2",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^22.7.8",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.6",
+    "oxlint": "^0.7.2",
+    "@antfu/eslint-config": "^2.26.0",
+    "eslint": "^8.57.0"
+  },
+  "peerDependencies": {
+    "next-auth": "4.21.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@9.11.0"
+}
